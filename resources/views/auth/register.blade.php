@@ -40,6 +40,24 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="employee" class="col-md-4 col-form-label text-md-right">{{ __('Employee') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="employee" class="form-control @error('employeee') is-invalid @enderror" name="employee" required>
+                                    <option value="">-</option>
+                                    <option value="IT engineer">IT engineer</option>
+                                    <option value="Software engineer">Software engineer</option>
+                                    <option value="Manager">Manager</option>
+                                </select>
+                                @error('employee')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
