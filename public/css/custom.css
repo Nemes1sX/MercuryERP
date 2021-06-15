@@ -1,0 +1,8 @@
+.btn-borderless {
+    border-style: none;
+    background: none;
+}
+.center-table{
+    margin-left: auto;
+    margin-right: auto;
+}

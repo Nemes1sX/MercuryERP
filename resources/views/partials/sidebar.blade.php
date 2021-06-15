@@ -1,11 +1,13 @@
 <div class="c-sidebar c-sidebar-fixed c-sidebar-dark c-sidebar-lg-show" id="sidebar">
     <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-title">Nav Title</li>
+        @if(auth()->user()->role_id == App\Models\Role::ADMIN)
         <li class="c-sidebar-nav-item">
-            <a class="c-sidebar-nav-link" href="#">
-                <i class="c-sidebar-nav-icon cil-speedometer"></i> Nav item
+            <a class="c-sidebar-nav-link" href="{{route('admin.user.index')}}">
+                <i class="c-sidebar-nav-icon cil-speedometer"></i> User list
             </a>
         </li>
+        @endif
         <li class="c-sidebar-nav-item">
             <a class="c-sidebar-nav-link" href="#">
                 <i class="c-sidebar-nav-icon cil-speedometer"></i> With badge
@@ -30,6 +32,4 @@
             </ul>
         </li>
     </ul>
-    <button class="c-sidebar-minimizer c-class-toggle" type="button" data-target="_parent"
-        data-class="c-sidebar-minimized"></button>
 </div>
